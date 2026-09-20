@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - World Capitals</title>
+    <style>
+ body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #c4dae8;
+    color:#432f2e;
+    display:flex;
+    flex-direction: column;
+    min-height: auto;
+}
+.navbar{
+    background-color: #feefb884;
+    color:#432f2e;
+    padding: 10px;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    border-radius: 10px;
+    flex-direction: column;
+}
+.logo h1{
+    display:flex;
+    gap: 10px;
+    text-align: left;
+    color: #432f2e;
+
+}
+.nav-links{
+    display: flex;
+    gap: 15px;
+    margin-left: 0;
+    justify-content: flex-start;
+}
+.nav-links a{
+    color: #432f2e;
+    text-decoration: none;
+    font-size: 14;
+    font-weight: 400;
+}
+.nav-links a:hover{
+    color: #6b96b0;
+    text-decoration: underline;
+}
+.form-container{
+    display: flex;
+    padding-bottom: 50px;
+    padding-top: 60px 40px;
+    align-items: center;
+    margin-top: 30px;
+    justify-content: center;
+}
+#contact-box{
+    padding: 30px 40px;
+    border-radius: 10px;
+    border: 1px solid #432f2e67;
+    width: 40%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+#contact-box h2{
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    gap:8px;
+    margin-bottom: 20px;
+  text-align: left;
+}
+.form-group label{
+    font-size: 14px;
+    font-weight: 300;
+    color:#432f2e;
+}
+.form-group input{
+    border-radius: 5px;
+    border: 1px solid #88a7c1;
+    font-size: 20px;
+    font-weight: 300;
+}
+.form-group textarea{
+    border-radius: 5px;
+    border: 1px solid #88a7c1;
+    font-size: 20px;
+    font-weight: 300;
+}
+.submit-btn{
+    padding:10px;
+    background-color: #feefb8;
+    color: #432f2e;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 400;
+}
+.submit-btn:hover{
+    background-color: #432f2e;
+    color:#feefb8;
+}
+footer{
+    color:#432f2e;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+}
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo"> 
+            <h1>Capitals</h1>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html" target="_self">Home</a>
+            <a href="about.html" target="_blank">About us</a>
+            <a href="contact.html" target="_blank">Contact</a>
+            <a href="signin.html" target="_blank">Sign in</a>
+        </nav>
+    </header>
+
+    <main class="form-container">
+        
+        <form id="contact-box">
+            <h2>Contact Us</h2>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name">
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email">
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Write your message here..."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; rawan. All rights reserved.</p>
+    </footer>
+    <script></script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - World Capitals</title>
+    <style>
+      body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #c4dae8;
+    color:#432f2e;
+    display:flex;
+    flex-direction: column;
+    min-height: auto;
+}
+.navbar{
+    background-color: #feefb884;
+    color:#432f2e;
+    padding: 10px;
+    display: flex;
+   flex-direction: column;
+    width: 100%;
+    border-radius: 10px;
+    gap:10px;
+    align-items: flex-start;
+
+}
+.logo h1{
+    display:flex;
+    gap: 10px;
+    text-align: left;
+    color: #432f2e;
+}
+.nav-links{
+    display: flex;
+    gap: 15px;
+    margin-left: 0;
+    justify-content: flex-start;
+}
+.nav-links a{
+    color: #432f2e;
+    text-decoration: none;
+    font-size: 14;
+    font-weight: 400;
+}
+.nav-links a:hover{
+    color: #88a7c1;
+    text-decoration: underline;
+}
+.form-container{
+    display: flex;
+    padding-bottom: 50px;
+    padding-top: 50px 30px;
+    align-items: center;
+    margin-top: 30px;
+    justify-content: center;
+}
+#form-box{
+    padding: 30px 40px;
+    border-radius: 10px;
+    border: 1px solid #88a7c13e;
+    width: 30%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+#form-box h2{
+text-align: center;
+margin-top: 0;
+margin-bottom: 25px;
+font-size: 30px;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+.form-group label{
+    font-size: 14px;
+    font-weight: 300;
+    color:#432f2e;
+}
+.form-group input{
+    border-radius: 6px;
+    border: 1px solid #88a7c13e;
+    font-size: 15px;
+    font-weight: 300;
+}
+.submit-btn{
+    padding:10px;
+    background-color: #feefb8;
+    color: #432f2e;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 400;
+}
+.submit-btn:hover{
+    background-color: #432f2e;
+    color:#feefb8;
+}
+footer{
+    color: #432f2e;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+}
+
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo"> 
+            <h1>Capitals</h1>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html" target="_self">Home</a>
+            <a href="about.html" target="_blank">About us</a>
+            <a href="contact.html" target="_blank">Contact</a>
+            <a href="signin.html" target="_blank">Sign in</a>
+        </nav>
+    </header>
+
+    <main class="form-container">
+        
+        <form id="form-box">
+            <h2>Sign In</h2>
+            <div class="form-group">
+                <label for="username">Username or Email:</label>
+                <input type="text" id="username" name="username" placeholder="Enter username or email">
+                <p id="hint"></p>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter password">
+            </div>
+
+            <button type="submit" class="submit-btn">Sign In</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; rawan. All rights reserved.</p>
+    </footer>
+    <script>
+        let usernameinput =document.getElementById("username");
+        let hint =document.getElementById("hint");
+        usernameinput.addEventListener("focus" , () =>{
+        hint.textContent="Username Shouldn't Be Less than 3 Letters";
+        hint.style.color="gray";
+        
+        });
+        usernameinput.addEventListener("blur" , (e)=>{
+        if (usernameinput.value.length<3){
+           hint.textContent="The Username Less Than 3 Letter"
+           hint.style.color="red";
+        }
+       else{
+           hint.textContent="Right Username.";
+           hint.style.color="green";
+        }
+        });
+    </script>
+</body>
+</html>
